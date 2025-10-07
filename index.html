@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Психолог Лана Цурцумия — Тбилиси</title>
+
+  <!-- Шрифты (Cormorant + Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body data-lang="ru">
+
+  <header class="topbar">
+    <div class="container row between center">
+      <div class="brand">
+        <div class="brand-main">Психолог Лана Цурцумия</div>
+      </div>
+
+      <nav class="nav">
+        <a href="#about" class="nav-link" data-i18n="menu_about">Обо мне</a>
+        <a href="#work"  class="nav-link" data-i18n="menu_work">С чем я работаю</a>
+        <a href="#services" class="nav-link" data-i18n="menu_services">Консультации</a>
+        <a href="#contacts" class="nav-link" data-i18n="menu_contacts">Контакты</a>
+      </nav>
+
+      <div class="controls row center">
+        <div class="langs" role="tablist" aria-label="Язык">
+          <button class="lang-btn active" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ka">GEO</button>
+        </div>
+        <a class="book-btn" href="#contacts" data-i18n="book">Записаться</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner container">
+      <div class="hero-left">
+        <h1 class="hero-title" data-i18n="hero_title">Психолог Лана Цурцумия</h1>
+        <p class="hero-sub" data-i18n="hero_sub">Пространство для внутренней опоры</p>
+        <div class="actions">
+          <a class="btn ghost" href="#about" data-i18n="know_more">Подробнее</a>
+          <a class="btn" href="#contacts" data-i18n="book">Записаться</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="portrait-wrap" aria-hidden="true">
+          <img src="images/lana1.jpg" alt="Лана Цурцумия" class="portrait">
+        </div>
+      </div>
+    </div>
+    <svg class="hero-blob" viewBox="0 0 600 600" aria-hidden="true"><path d="M421.9,344.2Q398,438.4,304.7,468.1Q211.4,497.8,140.1,446.7Q68.8,395.6,53.8,310.2Q38.9,224.8,94.3,160.6Q149.7,96.4,240.9,80.7Q332.1,65,432.7,108.8Q533.3,152.7,446.7,237.3Q360.1,322,421.9,344.2Z"></path></svg>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container grid about-grid">
+      <div class="col">
+        <h2 class="section-title" data-i18n="about_title">Обо мне</h2>
+        <p class="lead" data-i18n="about_text">Здравствуйте! Меня зовут Лана, я психолог в Тбилиси. Работаю с взрослыми и подростками, использую интегративный подход.</p>
+        <blockquote class="quote" data-i18n="quote">«Путь к себе начинается с внимательности к внутреннему миру.»</blockquote>
+      </div>
+      <div class="col">
+        <div class="card photo-card">
+          <img src="images/tbilisi3.jpg" alt="Тбилиси" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="section section--muted">
+    <div class="container">
+      <h2 class="section-title" data-i18n="work_title">С чем я работаю</h2>
+
+      <ul class="work-list">
+        <li>Кризисы</li>
+        <li>Тревога</li>
+        <li>Внутренние конфликты</li>
+        <li>Пограничное состояние</li>
+        <li>Психосоматические расстройства</li>
+        <li>Ощущение потери смысла жизни, неопределённости и одиночества</li>
+        <li>Детский психоанализ</li>
+        <li>Депрессия</li>
+        <li>Посттравматическое стрессовое расстройство (ПТСР)</li>
+        <li>Фобии, панические атаки</li>
+      </ul>
+
+      <p class="disclaimer" aria-live="polite"><strong>Не занимаюсь консультированием в привычном понимании, не даю советов и рекомендаций, не провожу семейную терапию.</strong></p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="container">
+
+> Maro Basilaia🇬🇪:
+<h2 class="section-title" data-i18n="services_title">Консультации</h2>
+      <div class="services-grid">
+        <div class="service">
+          <h3>Личная консультация</h3>
+          <p>Индивидуальная работа очно и онлайн.</p>
+        </div>
+        <div class="service">
+          <h3>Групповая работа</h3>
+          <p>Групповые сессии и тематические встречи.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section id="contacts" class="section section--light">
+    <div class="container grid about-grid">
+      <div class="col">
+        <h2 class="section-title" data-i18n="contacts_title">Контакты</h2>
+        <p><strong data-i18n="phone_label">Телефон:</strong> <a href="tel:+995555269956">+995 555 269 956</a></p>
+        <p><strong>Telegram:</strong> <a href="https://t.me/lana_tsurtsumia" target="_blank">@lana_tsurtsumia</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/lana.psychologi" target="_blank">@lana.psychologi</a></p>
+
+        <div class="form-card">
+          <h3 data-i18n="form_title">Записаться на консультацию</h3>
+          <form id="contactForm">
+            <label class="sr-only" for="name">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Ваше имя" required>
+
+            <label class="sr-only" for="message">Сообщение</label>
+            <textarea id="message" name="message" rows="4" placeholder="Кратко о запросе" required></textarea>
+
+            <button type="submit" class="btn" data-i18n="form_button">Отправить в Telegram</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="contact-img card">
+          <img src="images/tbilisi3.jpg" alt="Тбилиси minimal" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Цурцумия Лана Раулиевна. Все права защищены.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
