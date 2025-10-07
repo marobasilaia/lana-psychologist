@@ -1,121 +1,208 @@
-/* Основные стили сайта Ланы Цурцумия */
-body {
-  margin: 0;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-  line-height: 1.6;
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Психолог Лана Цурцумия</title>
+
+  <!-- Шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="brand">Психолог Лана Цурцумия</div>
+
+      <nav class="main-nav">
+        <a href="#about">Обо мне</a>
+        <a href="#services">С чем я работаю</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+
+      <div class="lang-wrap">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="ru">🇷🇺</button>
+          <button class="lang-btn" data-lang="en">🇬🇧</button>
+          <button class="lang-btn" data-lang="geo">🇬🇪</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner container">
+        <div class="hero-text">
+          <h1 id="hero-title">Психолог в Тбилиси</h1>
+          <p id="hero-sub">Помогаю обрести внутреннюю опору, осознанность и баланс</p>
+          <div class="hero-actions">
+            <a href="#about" class="btn ghost" id="btn-more">Подробнее</a>
+            <a href="#contact" class="btn" id="btn-book">Записаться</a>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <img src="images/lana1.jpg" alt="Лана Цурцумия" class="portrait">
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about fade-in">
+      <div class="container about-inner">
+        <div class="about-photo">
+          <img src="images/lana2.jpg" alt="Лана Цурцумия">
+        </div>
+        <div class="about-text">
+          <h2 id="about-title">Обо мне</h2>
+          <p id="about-p1">Здравствуйте! Меня зовут Лана, я психолог в Тбилиси. Работаю с взрослыми и подростками, использую интегративный подход и помогаю находить опору внутри себя.</p>
+          <p id="about-p2">Моя практика направлена на глубокое понимание переживаний, работу с тревогой, кризисами, поиском смысла и восстановлением контакта с собой.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services slide-up">
+      <div class="container">
+        <h2 id="services-title">С чем я работаю</h2>
+        <ul class="services-list">
+          <li>Кризисы</li>
+          <li>Тревога</li>
+          <li>Внутренние конфликты</li>
+          <li>Пограничное состояние</li>
+          <li>Психосоматические расстройства</li>
+          <li>Ощущение потери смысла, неопределённости и одиночества</li>
+          <li>Детский психоанализ</li>
+          <li>Депрессия</li>
+          <li>ПТСР, фобии, панические атаки</li>
+        </ul>
+
+        <p class="note" id="services-note">
+          Не занимаюсь консультированием в привычном понимании, не даю советов и рекомендаций, не провожу семейную терапию.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact fade-in">
+      <div class="container">
+        <h2 id="contact-title">Контакты</h2>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p>📞 <a href="tel:+995555269956">+995 555 269 956</a></p>
+            <p>💬 Telegram: <a href="https://t.me/lana_tsurtsumia" target="_blank">@lana_tsurtsumia</a></p>
+            <p>📸 Instagram: <a href="https://www.instagram.com/lana.psychologi" target="_blank">@lana.psychologi</a></p>
+          </div>
+
+          <div class="contact-form card">
+            <h3>Записаться</h3>
+            <form id="contactForm">
+              <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+              <textarea id="message" name="message" rows="4" placeholder="Кратко о запросе" required></textarea>
+              <button type="submit" class="btn">Отправить в Telegram</button>
+            </form>
+          </div>
+Telegram
+Lana Tsurtsumia
+
+Tbilisi
+
+SEND MESSAGE
+</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p id="footer-text">© 2025 Цурцумия Лана Раулиевна. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+:root{
+  --bg:#fdfbf9;
+  --beige:#f6efe6;
+  --accent:#c9a38d;
+  --accent-dark:#a37b53;
+  --text:#2e2e2e;
+  --muted:#777;
 }
 
-/* Шапка */
-header {
-  background-color: #ffffff;
-  padding: 20px 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"Open Sans",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  scroll-behavior:smooth;
 }
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
 
-header .container {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Header */
+header{
+  position:sticky;top:0;background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid rgba(0,0,0,0.05);
+  z-index:100;
 }
+header .container{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{font-family:'Playfair Display',serif;font-size:1.1rem}
+.main-nav{display:flex;gap:20px}
+.main-nav a{text-decoration:none;color:var(--text);transition:.3s}
+.main-nav a:hover{color:var(--accent-dark)}
 
-header h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #333;
-}
+/* Lang */
+.lang-switcher{display:flex;gap:8px}
+.lang-btn{background:none;border:none;cursor:pointer;font-size:20px;transition:.2s}
+.lang-btn.active{transform:scale(1.25);filter:drop-shadow(0 0 4px rgba(163,123,83,0.5))}
 
-nav a {
-  text-decoration: none;
-  color: #555;
-  margin-left: 20px;
-  font-size: 1rem;
-  transition: color 0.3s;
-}
+/* Hero */
+.hero{padding:60px 0}
+.hero-inner{display:flex;align-items:center;gap:40px;justify-content:space-between}
+.hero-text h1{font-family:'Playfair Display',serif;font-size:2.6rem}
+.hero-text p{color:var(--muted);font-size:1.05rem;margin:10px 0 20px}
+.btn{background:var(--accent);color:#fff;text-decoration:none;padding:10px 20px;border-radius:25px;font-weight:600}
+.btn.ghost{background:none;color:var(--text);border:1px solid rgba(0,0,0,0.1)}
+.hero-photo img{width:360px;height:460px;object-fit:cover;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.15)}
 
-nav a:hover {
-  color: #b46b6b;
-}
+/* About */
+.about-inner{display:flex;align-items:center;gap:40px}
+.about-photo img{width:420px;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,0.08)}
+.about-text h2{font-family:'Playfair Display',serif;margin-bottom:10px}
 
-/* Главный блок */
-.hero {
-  position: relative;
-  text-align: center;
-  color: white;
-}
+/* Services */
+.services{margin-top:50px}
+.services-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 20px;list-style:disc;padding-left:20px;margin-top:20px}
+.note{color:var(--muted);margin-top:15px;font-style:italic}
 
-.hero img {
-  width: 100%;
-  height: 90vh;
-  object-fit: cover;
-  filter: brightness(65%);
-}
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 400px;gap:24px;align-items:start}
+.card{background:#fff;padding:20px;border-radius:10px;box-shadow:0 6px 30px rgba(0,0,0,0.05)}
+.contact a{color:var(--accent-dark);text-decoration:none}
 
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+/* Footer */
+footer{text-align:center;padding:25px 0;margin-top:40px;color:var(--muted);border-top:1px solid rgba(0,0,0,0.05)}
 
-.hero-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
+/* Animations */
+.fade-in{opacity:0;transform:translateY(20px);transition:.8s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+.slide-up{opacity:0;transform:translateY(20px);transition:.8s ease}
+.slide-up.visible{opacity:1;transform:translateY(0)}
+[data-lang-text]{opacity:0;transform:translateY(10px);transition:.6s ease}
+[data-lang-text]:not([hidden]){opacity:1;transform:translateY(0)}
 
-.hero-text p {
-  font-size: 1.2rem;
-}
-
-/* Секции */
-section {
-  width: 80%;
-  margin: 60px auto;
-  text-align: center;
-}
-
-section h2 {
-  font-size: 2rem;
-  color: #444;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-section h2::after {
-  content: "";
-  width: 60px;
-  height: 3px;
-  background-color: #b46b6b;
-  display: block;
-  margin: 10px auto;
-}
-
-.about, .services, .contact {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* Контакты */
-.contact p {
-  font-size: 1.1rem;
-  margin: 10px 0;
-}
-
-/* Подвал */
-footer {
-  background-color: #222;
-  color: #ccc;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
-  font-size: 0.9rem;
+/* Responsive */
+@media(max-width:980px){
+  .hero-inner{flex-direction:column-reverse;text-align:center}
+  .about-inner{flex-direction:column}
+  .contact-grid{grid-template-columns:1fr}
 }
