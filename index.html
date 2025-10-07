@@ -1,65 +1,119 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Психолог Лана Цурцумия</title>
-  <link rel="stylesheet" href="стиль.css">
+
+  <!-- Шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
     <div class="container">
-      <h1>Психолог Лана Цурцумия</h1>
-      <nav>
+      <div class="brand">Психолог Лана Цурцумия</div>
+
+      <nav class="main-nav">
         <a href="#about">Обо мне</a>
-        <a href="#services">С чем я помогаю</a>
+        <a href="#services">С чем я работаю</a>
         <a href="#contact">Контакты</a>
       </nav>
+
+      <div class="lang-wrap">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="ru">🇷🇺<span class="tooltip">Русский</span></button>
+          <button class="lang-btn" data-lang="en">🇬🇧<span class="tooltip">English</span></button>
+          <button class="lang-btn" data-lang="geo">🇬🇪<span class="tooltip">ქართული</span></button>
+        </div>
+      </div>
     </div>
   </header>
 
-  <section class="hero">
-    <img src="изображения/lana1.jpeg" alt="Лана Цурцумия">
-    <div class="hero-text">
-      <h2>Психолог в Тбилиси</h2>
-      <p>Помогаю разобраться в себе, чувствах и отношениях</p>
-    </div>
-  </section>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner container">
+        <div class="hero-text">
+          <h1 id="hero-title">Психолог в Тбилиси</h1>
+          <p id="hero-sub">Помогаю обрести внутреннюю опору, осознанность и баланс</p>
+          <div class="hero-actions">
+            <a href="#about" class="btn ghost">Подробнее</a>
+            <a href="#contact" class="btn">Записаться</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="images/lana1.jpg" alt="Лана Цурцумия" class="portrait">
+        </div>
+      </div>
+    </section>
 
-  <section id="about" class="about">
-    <h2>Обо мне</h2>
-    <div class="about-content">
-      <img src="изображения/lana2.jpeg" alt="Лана Цурцумия">
-      <p>
-        Меня зовут Лана Цурцумия. Я практикующий психолог в Тбилиси. 
-        Моя цель — помочь вам лучше понять себя, справиться с тревогой, 
-        выгоранием, трудностями в отношениях и жизненными изменениями.
-      </p>
-    </div>
-  </section>
+    <!-- ABOUT -->
+    <section id="about" class="about fade-in">
+      <div class="container about-inner">
+        <div class="about-photo">
+          <img src="images/lana2.jpg" alt="Лана Цурцумия">
+        </div>
+        <div class="about-text">
+          <h2 id="about-title">Обо мне</h2>
+          <p id="about-p1">Здравствуйте! Меня зовут Лана, я психолог в Тбилиси. Работаю с взрослыми и подростками, использую интегративный подход и помогаю находить опору внутри себя.</p>
+          <p id="about-p2">Моя практика направлена на глубокое понимание переживаний, работу с тревогой, кризисами, поиском смысла и восстановлением контакта с собой.</p>
+        </div>
+      </div>
+    </section>
 
-  <section id="services" class="services">
-    <h2>С чем я помогаю</h2>
-    <ul>
-      <li>Тревога, неуверенность, страхи</li>
-      <li>Выгорание, апатия, потеря мотивации</li>
-      <li>Отношения с близкими и партнёрами</li>
-      <li>Поиск себя и смысла</li>
-    </ul>
-  </section>
+    <!-- SERVICES -->
+    <section id="services" class="services slide-up">
+      <div class="container">
+        <h2 id="services-title">С чем я работаю</h2>
+        <ul class="services-list">
+          <li>Кризисы</li>
+          <li>Тревога</li>
+          <li>Внутренние конфликты</li>
+          <li>Пограничное состояние</li>
+          <li>Психосоматические расстройства</li>
+          <li>Ощущение потери смысла, неопределённости и одиночества</li>
+          <li>Детский психоанализ</li>
+          <li>Депрессия</li>
+          <li>ПТСР, фобии, панические атаки</li>
+        </ul>
+        <p class="note" id="services-note">
+          Не занимаюсь консультированием в привычном понимании, не даю советов и рекомендаций, не провожу семейную терапию.
+        </p>
+      </div>
+    </section>
 
-  <section id="contact" class="contact">
-    <h2>Контакты</h2>
-    <p>📍 Тбилиси, онлайн и офлайн консультации</p>
-    <p>📩 <a href="mailto:lana.psychologist@gmail.com">lana.psychologist@gmail.com</a></p>
-    <p>📱 Telegram: <a href="https://t.me/lanatsurtsumia" target="_blank">@lanatsurtsumia</a></p>
-  </section>
+    <!-- CONTACT -->
+    <section id="contact" class="contact fade-in">
+      <div class="container">
+        <h2 id="contact-title">Контакты</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p>📞 <a href="tel:+995555269956">+995 555 269 956</a></p>
+            <p>💬 Telegram: <a href="https://t.me/lana_tsurtsumia" target="_blank">@lana_tsurtsumia</a></p>
+            <p>📸 Instagram: <a href="https://www.instagram.com/lana.psychologi" target="_blank">@lana.psychologi</a></p>
+          </div>
+          <div class="contact-form card">
+            <h3>Записаться</h3>
+            <form id="contactForm">
+              <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+              <textarea id="message" name="message" rows="4" placeholder="Кратко о запросе" required></textarea>
+              <button type="submit" class="btn">Отправить в Telegram</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Психолог Лана Цурцумия</p>
+    <div class="container">
+      <p id="footer-text">© 2025 Цурцумия Лана Раулиевна. Все права защищены.</p>
+    </div>
   </footer>
 
-  <script src="скрипт.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
