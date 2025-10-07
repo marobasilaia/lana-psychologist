@@ -1,119 +1,121 @@
-/* Простая локальная i18n (данные) */
-const I18N = {
-  ru: {
-    menu_about: "Обо мне",
-    menu_work: "С чем я работаю",
-    menu_services: "Консультации",
-    menu_contacts: "Контакты",
-    book: "Записаться",
-    hero_title: "Психолог Лана Цурцумия",
-    hero_sub: "Пространство для внутренней опоры",
-    know_more: "Подробнее",
-    about_title: "Обо мне",
-    about_text: "Здравствуйте! Меня зовут Лана, я психолог в Тбилиси. Работаю с взрослыми и подростками, использую интегративный подход.",
-    quote: "«Путь к себе начинается с внимательности к внутреннему миру.»",
-    work_title: "С чем я работаю",
-    services_title: "Консультации",
-    form_title: "Записаться на консультацию",
-    form_button: "Отправить в Telegram",
-    phone_label: "Телефон:"
-  },
-  en: {
-    menu_about: "About",
-    menu_work: "What I work with",
-    menu_services: "Consultations",
-    menu_contacts: "Contacts",
-    book: "Book",
-    hero_title: "Lana Tsurtsumia, Psychologist",
-    hero_sub: "A space for inner support",
-    know_more: "Learn more",
-    about_title: "About me",
-    about_text: "Hello! My name is Lana, I am a psychologist in Tbilisi. I work with adults and adolescents using an integrative approach.",
-    quote: "“The path to oneself starts with attention to the inner world.”",
-    work_title: "What I work with",
-    services_title: "Consultations",
-    form_title: "Book a consultation",
-    form_button: "Send in Telegram",
-    phone_label: "Phone:"
-  },
-  ka: {
-    menu_about: "ჩემ შესახებ",
-    menu_work: "რასთან ვმუშაობ",
-    menu_services: "კონსულტაციები",
-    menu_contacts: "კონტაქტი",
-    book: "დაჯავშნა",
-    hero_title: "ლანა ცურცუმია, ფსიქოლოგი",
-    hero_sub: "შიგნით მხარის სივრცე",
-    know_more: "მეტი",
-    about_title: "ჩემ შესახებ",
-    about_text: "გამარჯობა! მე ლანა ვარ, ფსიქოლოგი თბილისში. ვმუშაობ ზრდასრულებთან და მოზარდებთან ინტეგრაციული მიდგომით.",
-    quote: "“გზა თავისკენ იწყება შიდა სამყაროზე ყურადღებით.”",
-    work_title: "რასთან ვმუშაობ",
-    services_title: "კონსულტაციები",
-    form_title: "დაჯავშნა",
-    form_button: "შეტყობინება Telegram-ში",
-    phone_label: "ტელეფონი:"
-  }
-};
-
-/* Применить переводы на страницу */
-function applyLang(lang){
-  document.body.setAttribute('data-lang', lang);
-  document.querySelectorAll('[data-i18n]').forEach(node=>{
-    const key = node.getAttribute('data-i18n');
-    if(I18N[lang] && I18N[lang][key]) node.textContent = I18N[lang][key];
-  });
+/* Основные стили сайта Ланы Цурцумия */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Инициализация — русский по умолчанию */
-applyLang('ru');
-
-/* Кнопки переключения языков */
-document.querySelectorAll('.lang-btn').forEach(btn=>{
-  btn.addEventListener('click', ()=>{
-    document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    const lang = btn.dataset.lang;
-    applyLang(lang);
-  });
-});
-
-/* Smooth anchor scrolling handled by CSS 'scroll-behavior: smooth' but we add offset for fixed header */
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click', function(e){
-    const href = this.getAttribute('href');
-    if(!href || href === '#') return;
-    e.preventDefault();
-    const target = document.querySelector(href);
-    if(!target) return;
-    const headerOffset = document.querySelector('.topbar').offsetHeight;
-    const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
-    const offsetPosition = elementPosition - headerOffset - 16;
-    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-  });
-});
-
-/* Contact form -> opens Telegram chat with prefilled message */
-const contactForm = document.getElementById('contactForm');
-if(contactForm){
-  contactForm.addEventListener('submit', function(e){
-    e.preventDefault();
-    const name = encodeURIComponent(document.getElementById('name').value.trim());
-    const message = encodeURIComponent(document.getElementById('message').value.trim());
-    if(!name || !message){
-      alert((document.body.getAttribute('data-lang') === 'en') ? 'Please fill name and message.' : (document.body.getAttribute('data-lang') === 'ka' ? 'გთხოვთ შეავსოთ სახელი და შეტყობინება.
-' : 'Пожалуйста, заполните имя и сообщение.'));
-      return;
-    }
-    const text = Имя: ${decodeURIComponent(name)}%0AСообщение: ${decodeURIComponent(message)};
-    const url = https://t.me/lana_tsurtsumia?text=${encodeURIComponent(`Имя: ${decodeURIComponent(name)}\nСообщение: ${decodeURIComponent(message)}`)};
-    window.open(url, '_blank');
-  });
+/* Шапка */
+header {
+  background-color: #ffffff;
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Simple parallax effect for hero image and blob */
-window.addEventListener('scroll', function(){
-  const sc = window.scrollY;
-  const blob = document.querySelector('.hero-blob');
-  if(blob) blob.style.transform = translateY(${sc * 0.05}px);
-});
+header .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  margin-left: 20px;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #b46b6b;
+}
+
+/* Главный блок */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  filter: brightness(65%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* Секции */
+section {
+  width: 80%;
+  margin: 60px auto;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #b46b6b;
+  display: block;
+  margin: 10px auto;
+}
+
+.about, .services, .contact {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Контакты */
+.contact p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+/* Подвал */
+footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
